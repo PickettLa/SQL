@@ -1,0 +1,18 @@
+--Create a candy store database.
+
+CREATE TABLE candy_store (id TEXT PRIMARY KEY, item TEXT, quanity INTEGER, cost INTEGER);
+
+INSERT INTO candy_store VALUES (1, "reeses", 5, 1.00);
+INSERT INTO candy_store VALUES (2, "musketeers", 6, 1.50); 
+INSERT INTO candy_store VALUES (3, "take five", 2, 1.25);
+INSERT INTO candy_store VALUES (4, "kitkat", 4, 1.25);
+INSERT INTO candy_store VALUES (5, "tootsie roll", 12, 1.00);
+
+--Display the database ordered by quanity.
+SELECT * FROM candy_store ORDER BY quanity;
+
+--Display the database ordered by cost ascending.
+SELECT * FROM candy_store ORDER BY cost ASC; 
+
+--Display the database sum cost of all items.
+SELECT cost, SUM (cost) FROM candy_store;
